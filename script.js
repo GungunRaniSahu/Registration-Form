@@ -20,22 +20,23 @@ document.addEventListener("DOMContentLoaded", function () {
 
         console.log("✅ Sending Data:", teamData);
 
-        fetch("https://script.google.com/macros/s/AKfycbzCfP0QxqMRNdGQuLscty7u11mxtjAdWAnr84JNyWt5pQ2TkvhP8v1ONo_ipVCM_Byx/exec", {
-            method: "POST",
-            body: JSON.stringify(teamData),
-            headers: { "Content-Type": "application/json" }
-        })
-        .then(response => response.text())
-        .then(data => {
-            console.log("✅ Response from Google Script:", data);
-            document.getElementById('statusMessage').innerText = "✅ Team Registered Successfully!";
-            document.getElementById('statusMessage').style.color = "green";
-            document.getElementById('bidderForm').reset();
-        })
-        .catch(error => {
-            console.error("❌ Fetch Error:", error);
-            document.getElementById('statusMessage').innerText = "❌ Error registering team. Check console.";
-            document.getElementById('statusMessage').style.color = "red";
-        });
+fetch("https://corsproxy.io/?" + encodeURIComponent("https://script.google.com/macros/s/AKfycbzCfP0QxqMRNdGQuLscty7u11mxtjAdWAnr84JNyWt5pQ2TkvhP8v1ONo_ipVCM_Byx/exec"), {
+    method: "POST",
+    body: JSON.stringify(teamData),
+    headers: { "Content-Type": "application/json" }
+})
+.then(response => response.text())
+.then(data => {
+    console.log("✅ Response from Google Script:", data);
+    document.getElementById('statusMessage').innerText = "✅ Team Registered Successfully!";
+    document.getElementById('statusMessage').style.color = "green";
+    document.getElementById('bidderForm').reset();
+})
+.catch(error => {
+    console.error("❌ Fetch Error:", error);
+    document.getElementById('statusMessage').innerText = "❌ Error registering team. Check console.";
+    document.getElementById('statusMessage').style.color = "red";
+});
+
     });
 });
