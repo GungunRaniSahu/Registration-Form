@@ -14,7 +14,7 @@ document.getElementById('bidderForm').addEventListener('submit', function (event
         ]
     };
 
-    fetch("YOUR_GOOGLE_SCRIPT_URL_HERE", {
+    fetch("https://script.google.com/macros/s/AKfycbwMOBpauCWPklwp_GKCsSHMn4inf8l9K6Mqp90yIjfolZb0oWjci7HI8EvusfIw__Dt/exec", {
         method: "POST",
         body: JSON.stringify(teamData),
         headers: { "Content-Type": "application/json" }
