@@ -1,6 +1,7 @@
 document.getElementById('bidderForm').addEventListener('submit', function (event) {
     event.preventDefault();  
 
+    // Collect form data
     const teamData = {
         teamName: document.getElementById('teamName').value,
         leaderName: document.getElementById('leaderName').value,
@@ -14,6 +15,9 @@ document.getElementById('bidderForm').addEventListener('submit', function (event
         ]
     };
 
+    console.log("✅ Sending Data:", teamData); // Debugging
+
+    // Fetch request to Google Apps Script
     fetch("https://script.google.com/macros/s/AKfycbzCfP0QxqMRNdGQuLscty7u11mxtjAdWAnr84JNyWt5pQ2TkvhP8v1ONo_ipVCM_Byx/exec", {
         method: "POST",
         body: JSON.stringify(teamData),
@@ -21,8 +25,20 @@ document.getElementById('bidderForm').addEventListener('submit', function (event
     })
     .then(response => response.text())
     .then(data => {
-        document.getElementById('statusMessage').innerText = "Team Registered Successfully!";
-        document.getElementById('bidderForm').reset();
+        console.log("✅ Response from Google Script:", data); // Debugging
+
+        if (data.includes("Success")) {
+            document.getElementById('statusMessage').innerText = "✅ Team Registered Successfully!";
+            document.getElementById('statusMessage').style.color = "green";
+            document.getElementById('bidderForm').reset();
+        } else {
+            document.getElementById('statusMessage').innerText = "⚠️ Error: " + data;
+            document.getElementById('statusMessage').style.color = "red";
+        }
     })
-    .catch(error => console.error("Error:", error));
+    .catch(error => {
+        console.error("❌ Fetch Error:", error);
+        document.getElementById('statusMessage').innerText = "❌ Error registering team. Check console.";
+        document.getElementById('statusMessage').style.color = "red";
+    });
 });
