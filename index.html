@@ -10,31 +10,38 @@
     <div class="container">
         <div class="ipl-banner"></div>
         <h2>Bidder Registration</h2>
-
-        <form id="bidderForm" action="#" method="POST">
+        <form id="bidderForm">
             <!-- Team Details -->
-            <label for="teamName">Team Name</label>
-            <input type="text" id="teamName" name="teamName" placeholder="Enter Team Name" required>
+            <label>Team Name</label>
+            <input type="text" id="teamName" placeholder="Enter Team Name" required>
 
             <!-- Leader Details -->
-            <label for="leaderName">Leader Name</label>
-            <input type="text" id="leaderName" name="leaderName" placeholder="Enter Leader Name" required>
+            <label>Leader Name</label>
+            <input type="text" id="leaderName" placeholder="Enter Leader Name" required>
 
-            <label for="leaderContact">Leader Contact</label>
-            <input type="tel" id="leaderContact" name="leaderContact" placeholder="Enter Leader Contact" required>
+            <label>Leader Contact</label>
+            <input type="tel" id="leaderContact" placeholder="Enter Leader Contact" required>
 
             <!-- Leader Department & Semester -->
-            <label for="leaderDept">Leader Department</label>
-            <select id="leaderDept" name="leaderDept" required>
+            <label>Leader Department</label>
+            <select id="leaderDept" required>
                 <option value="" disabled selected>Select Department</option>
                 <option value="bba">BBA</option>
                 <option value="bba-ent">BBA (Entrepreneurship)</option>
                 <option value="bba-sm">BBA (Sports Management)</option>
+                <option value="bba-hm">BBA (Hospital Management)</option>
+                <option value="bba-gb">BBA (Global Business)</option>
                 <option value="bca">BCA (Computer Applications)</option>
+                <option value="bsc-mag">B.Sc. (Multimedia, Animation & Graphics)</option>
+                <option value="bsc-cs">B.Sc. (Cyber Security)</option>
+                <option value="bsc-ds">B.Sc. (Data Science)</option>
+                <option value="bsc-id">B.Sc. (Interior Design)</option>
+                <option value="bsc-ms">B.Sc. (Media Science)</option>
+                <option value="bhm">BHM (Hotel Management)</option>
             </select>
 
-            <label for="leaderSem">Leader Semester</label>
-            <select id="leaderSem" name="leaderSem" required>
+            <label>Leader Semester</label>
+            <select id="leaderSem" required>
                 <option value="" disabled selected>Select Semester</option>
                 <option value="2nd Sem">2nd Sem</option>
                 <option value="4th Sem">4th Sem</option>
@@ -42,57 +49,87 @@
             </select>
 
             <!-- Member 1 -->
-            <label for="member1">Member 1 Name</label>
-            <input type="text" id="member1" name="member1" placeholder="Enter Member 1 Name" required>
+            <label>Member 1 Name</label>
+            <input type="text" id="member1" placeholder="Enter Member 1 Name" required>
 
-            <label for="member1Dept">Member 1 Department</label>
-            <select id="member1Dept" name="member1Dept" required>
+            <label>Member 1 Department</label>
+            <select id="member1Dept" required>
                 <option value="" disabled selected>Select Department</option>
                 <option value="bba">BBA</option>
-                <option value="bca">BCA</option>
+                <option value="bba-ent">BBA (Entrepreneurship)</option>
+                <option value="bba-sm">BBA (Sports Management)</option>
+                <option value="bba-hm">BBA (Hospital Management)</option>
+                <option value="bba-gb">BBA (Global Business)</option>
+                <option value="bca">BCA (Computer Applications)</option>
+                <option value="bsc-mag">B.Sc. (Multimedia, Animation & Graphics)</option>
+                <option value="bsc-ds">B.Sc. (Data Science)</option>
+                <option value="bsc-id">B.Sc. (Interior Design)</option>
+                <option value="bsc-ms">B.Sc. (Media Science)</option>
+                <option value="bhm">BHM (Hotel Management)</option>
             </select>
 
-            <label for="member1Sem">Member 1 Semester</label>
-            <select id="member1Sem" name="member1Sem" required>
+            <label>Member 1 Semester</label>
+            <select id="member1Sem" required>
                 <option value="" disabled selected>Select Semester</option>
                 <option value="2nd Sem">2nd Sem</option>
                 <option value="4th Sem">4th Sem</option>
+                <option value="6th Sem">6th Sem</option>
             </select>
 
             <!-- Member 2 -->
-            <label for="member2">Member 2 Name</label>
-            <input type="text" id="member2" name="member2" placeholder="Enter Member 2 Name" required>
+            <label>Member 2 Name</label>
+            <input type="text" id="member2" placeholder="Enter Member 2 Name" required>
 
-            <label for="member2Dept">Member 2 Department</label>
-            <select id="member2Dept" name="member2Dept" required>
+            <label>Member 2 Department</label>
+            <select id="member2Dept" required>
                 <option value="" disabled selected>Select Department</option>
                 <option value="bba">BBA</option>
-                <option value="bca">BCA</option>
+                <option value="bba-ent">BBA (Entrepreneurship)</option>
+                <option value="bba-sm">BBA (Sports Management)</option>
+                <option value="bba-hm">BBA (Hospital Management)</option>
+                <option value="bba-gb">BBA (Global Business)</option>
+                <option value="bca">BCA (Computer Applications)</option>
+                <option value="bsc-mag">B.Sc. (Multimedia, Animation & Graphics)</option>
+                <option value="bsc-ds">B.Sc. (Data Science)</option>
+                <option value="bsc-id">B.Sc. (Interior Design)</option>
+                <option value="bsc-ms">B.Sc. (Media Science)</option>
+                <option value="bhm">BHM (Hotel Management)</option>
             </select>
 
-            <label for="member2Sem">Member 2 Semester</label>
-            <select id="member2Sem" name="member2Sem" required>
+            <label>Member 2 Semester</label>
+            <select id="member2Sem" required>
                 <option value="" disabled selected>Select Semester</option>
                 <option value="2nd Sem">2nd Sem</option>
                 <option value="4th Sem">4th Sem</option>
+                <option value="6th Sem">6th Sem</option>
             </select>
 
             <!-- Member 3 -->
-            <label for="member3">Member 3 Name</label>
-            <input type="text" id="member3" name="member3" placeholder="Enter Member 3 Name" required>
+            <label>Member 3 Name</label>
+            <input type="text" id="member3" placeholder="Enter Member 3 Name" required>
 
-            <label for="member3Dept">Member 3 Department</label>
-            <select id="member3Dept" name="member3Dept" required>
+            <label>Member 3 Department</label>
+            <select id="member3Dept" required>
                 <option value="" disabled selected>Select Department</option>
                 <option value="bba">BBA</option>
-                <option value="bca">BCA</option>
+                <option value="bba-ent">BBA (Entrepreneurship)</option>
+                <option value="bba-sm">BBA (Sports Management)</option>
+                <option value="bba-hm">BBA (Hospital Management)</option>
+                <option value="bba-gb">BBA (Global Business)</option>
+                <option value="bca">BCA (Computer Applications)</option>
+                <option value="bsc-mag">B.Sc. (Multimedia, Animation & Graphics)</option>
+                <option value="bsc-ds">B.Sc. (Data Science)</option>
+                <option value="bsc-id">B.Sc. (Interior Design)</option>
+                <option value="bsc-ms">B.Sc. (Media Science)</option>
+                <option value="bhm">BHM (Hotel Management)</option>
             </select>
 
-            <label for="member3Sem">Member 3 Semester</label>
-            <select id="member3Sem" name="member3Sem" required>
+            <label>Member 3 Semester</label>
+            <select id="member3Sem" required>
                 <option value="" disabled selected>Select Semester</option>
                 <option value="2nd Sem">2nd Sem</option>
                 <option value="4th Sem">4th Sem</option>
+                <option value="6th Sem">6th Sem</option>
             </select>
 
             <!-- Submit Button -->
