@@ -16,8 +16,8 @@ A web-based event registration form that collects participant details and stores
 
 1. **Clone the Repository**  
    ```bash
-   git clone https://github.com/your-username/event-registration.git
-   cd event-registration
+   git clone https://github.com/your-username/Registration-Form.git
+   cd Registration-Form
    ```  
 
 2. **Set Up Firebase**  
@@ -29,9 +29,6 @@ A web-based event registration form that collects participant details and stores
 3. **Run the Project**  
    Open `index.html` in a browser or use a live server  
 
-## 📷 Screenshots (Optional)
-Add images of your registration form UI here.
-
 ## 📝 Future Improvements
 - Email confirmation on successful registration
 - QR code for event entry
@@ -40,6 +37,4 @@ Add images of your registration form UI here.
 ## 💡 Contributing
 If you'd like to contribute, feel free to fork the repo and submit a pull request!
 
-## 📜 License
-This project is licensed under [MIT License](LICENSE).
 
